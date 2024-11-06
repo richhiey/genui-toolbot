@@ -4,6 +4,7 @@ import { Message as VercelChatMessage, StreamingTextResponse } from "ai";
 import { ChatOpenAI } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { HttpResponseOutputParser } from "langchain/output_parsers";
+import { ChatGroq } from "@langchain/groq";
 
 export const runtime = "edge";
 
@@ -42,10 +43,13 @@ export async function POST(req: NextRequest) {
      * See a full list of supported models at:
      * https://js.langchain.com/docs/modules/model_io/models/
      */
-    const model = new ChatOpenAI({
-      temperature: 0.8,
-      model: "gpt-4o-mini",
-    });
+
+    const model = new ChatGroq({
+      model: "mixtral-8x7b-32768",
+      temperature: 0,
+      maxTokens: undefined,
+      maxRetries: 2
+    })
 
     /**
      * Chat models stream message chunks rather than bytes, so this
