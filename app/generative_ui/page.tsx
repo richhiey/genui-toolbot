@@ -59,7 +59,7 @@ export default function GenerativeUIPage() {
           <li className="hidden text-l md:block">
             🔗
             <span className="ml-2">
-              This template showcases how to render React components right from
+              Generative UI with images using React components from
               a{" "}
               <a href="https://js.langchain.com/" target="_blank">
                 LangChain.js
@@ -67,12 +67,7 @@ export default function GenerativeUIPage() {
               chain and the Vercel{" "}
               <a href="https://sdk.vercel.ai/docs" target="_blank">
                 AI SDK
-              </a>{" "}
-              in a{" "}
-              <a href="https://nextjs.org/" target="_blank">
-                Next.js
-              </a>{" "}
-              project.
+              </a>.
             </span>
           </li>
 

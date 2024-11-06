@@ -13,6 +13,7 @@ export function Navbar() {
       <a className={`mr-4 ${pathname === "/retrieval_agents" ? "text-white border-b" : ""}`} href="/retrieval_agents">🤖 Retrieval Agents</a>
       {/* <a className={`mr-4 ${pathname === "/ai_sdk" ? "text-white border-b" : ""}`} href="/ai_sdk">🌊 LangChain x AI SDK</a> */}
       <a className={`mr-4 ${pathname === "/generative_ui" ? "text-white border-b" : ""}`} href="/generative_ui">✨ Generative UI</a>
+      {/* <a className={`mr-4 ${pathname === "/generative_ui" ? "text-white border-b" : ""}`} href="/generative_ui">✨ About</a> */}
     </nav>
   );
 }
