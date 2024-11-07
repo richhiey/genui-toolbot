@@ -73,9 +73,10 @@ const prompt = ChatPromptTemplate.fromMessages([
 ]);
 
 const llm = new ChatGroq({
-  model: "gpt-4o-mini",
+  model: "mixtral-8x7b-32768",
   temperature: 0,
-  streaming: true,
+  maxTokens: undefined,
+  maxRetries: 2
 });
 
 const tools = [searchTool, imagesTool];
